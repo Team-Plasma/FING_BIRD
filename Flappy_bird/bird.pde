@@ -14,10 +14,17 @@ class Bird {
 
   void update() {
     loc.y += 1;
+    if (loc.y > height || loc.y < 0) {
+      kill();
+    }
   }
 
   void click() {
     loc.y -=50;
+  }
+  
+  void kill() {
+    mode = 2;
   }
 }
 
